@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_gravity="center"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    tools:context=".LoginActivity">
+
+    <EditText
+        android:id="@+id/phoneNumberEditText"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:hint="+9199999XXXXX"
+        android:layout_width="wrap_content"
+        android:ems="12"
+        android:layout_height="wrap_content" />
+
+    <EditText
+        android:id="@+id/otpEditText"
+        android:visibility="gone"
+        android:hint="OTP"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:maxLength="6"
+        android:inputType="number"
+        android:ems="10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:id="@+id/phoneLoginButton"
+        android:text="Login with Phone"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <LinearLayout
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:layout_marginHorizontal="5dp"
+            android:enabled="false"
+            android:id="@+id/resetButton"
+            android:text="RESET"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:layout_marginHorizontal="5dp"
+            android:enabled="false"
+            android:id="@+id/verifyOtpButton"
+            android:text="Verify OTP"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+
+</LinearLayout>
