@@ -1,5 +1,6 @@
 package com.kamal.chatterbox
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
@@ -111,7 +112,7 @@ class LoginActivity : AppCompatActivity() {
                 if (task.isSuccessful) {
                     Toast.makeText(this, "LOGIN SUCCESSFUL", Toast.LENGTH_SHORT).show()
                     val user = task.result?.user
-//                    goToProfileScreen()
+                    goToProfileScreen()
                 } else {
                     Toast.makeText(this, "LOGIN FAILED", Toast.LENGTH_SHORT).show()
                     if (task.exception is FirebaseAuthInvalidCredentialsException) {
@@ -123,4 +124,7 @@ class LoginActivity : AppCompatActivity() {
     }
 
 
+    fun goToProfileScreen() {
+        startActivity(Intent(this, ProfileActivity::class.java))
+    }
 }
